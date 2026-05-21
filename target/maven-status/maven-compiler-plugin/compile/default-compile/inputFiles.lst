@@ -1,0 +1,13 @@
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/decorator/ArmaduraDecorator.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/decorator/EspadaDecorator.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/decorator/PersonajeDecorator.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/factory/PersonajeFactory.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/juego/JuegoLucha.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/model/Arquero.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/model/Guerrero.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/model/Mago.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/model/Personaje.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/strategy/AtaqueFuerte.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/strategy/AtaqueMagico.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/strategy/AtaqueRapido.java
+/workspaces/Juego-de-Lucha/src/main/java/com/juego/strategy/EstrategiaAtaque.java

@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.juego</groupId>
+<artifactId>juego-lucha</artifactId>
+<version>1.0-SNAPSHOT</version>
+<packaging>jar</packaging>
+<name>Juego de Lucha - Patrones de Diseno</name>
+<description>Refinamiento arquitectonico de un juego de lucha por turnos con patrones de diseno</description>
+<properties>
+<maven.compiler.source>17</maven.compiler.source>
+<maven.compiler.target>17</maven.compiler.target>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<junit.version>5.10.0</junit.version>
+<mockito.version>5.5.0</mockito.version>
+<jacoco.version>0.8.9</jacoco.version>
+</properties>
+<dependencies>
+<!--  JUnit 5 API  -->
+<dependency>
+<groupId>org.junit.jupiter</groupId>
+<artifactId>junit-jupiter-api</artifactId>
+<version>${junit.version}</version>
+<scope>test</scope>
+</dependency>
+<!--  JUnit 5 Engine  -->
+<dependency>
+<groupId>org.junit.jupiter</groupId>
+<artifactId>junit-jupiter-engine</artifactId>
+<version>${junit.version}</version>
+<scope>test</scope>
+</dependency>
+<!--  JUnit 5 Params  -->
+<dependency>
+<groupId>org.junit.jupiter</groupId>
+<artifactId>junit-jupiter-params</artifactId>
+<version>${junit.version}</version>
+<scope>test</scope>
+</dependency>
+<!--  Mockito Core  -->
+<dependency>
+<groupId>org.mockito</groupId>
+<artifactId>mockito-core</artifactId>
+<version>${mockito.version}</version>
+<scope>test</scope>
+</dependency>
+<!--  Mockito JUnit Jupiter  -->
+<dependency>
+<groupId>org.mockito</groupId>
+<artifactId>mockito-junit-jupiter</artifactId>
+<version>${mockito.version}</version>
+<scope>test</scope>
+</dependency>
+</dependencies>
+<build>
+<plugins>
+<!--  Maven Surefire para ejecutar tests JUnit 5  -->
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>3.1.2</version>
+<configuration>
+<includes>
+<include>**/*Test.java</include>
+</includes>
+</configuration>
+</plugin>
+<!--  JaCoCo para cobertura de codigo  -->
+<plugin>
+<groupId>org.jacoco</groupId>
+<artifactId>jacoco-maven-plugin</artifactId>
+<version>${jacoco.version}</version>
+<executions>
+<!--  Instrumentar clases antes de tests  -->
+<execution>
+<id>prepare-agent</id>
+<goals>
+<goal>prepare-agent</goal>
+</goals>
+</execution>
+<!--  Generar reporte HTML despues de tests  -->
+<execution>
+<id>report</id>
+<phase>test</phase>
+<goals>
+<goal>report</goal>
+</goals>
+</execution>
+<!--  Validar cobertura minima del 80%  -->
+<execution>
+<id>check</id>
+<goals>
+<goal>check</goal>
+</goals>
+<configuration>
+<rules>
+<rule>
+<element>BUNDLE</element>
+<limits>
+<limit>
+<counter>INSTRUCTION</counter>
+<value>COVEREDRATIO</value>
+<minimum>0.80</minimum>
+</limit>
+</limits>
+</rule>
+</rules>
+</configuration>
+</execution>
+</executions>
+</plugin>
+<!--  Plugin para ejecutar la aplicacion principal  -->
+<plugin>
+<groupId>org.codehaus.mojo</groupId>
+<artifactId>exec-maven-plugin</artifactId>
+<version>3.1.0</version>
+<configuration>
+<mainClass>com.juego.juego.JuegoLucha</mainClass>
+</configuration>
+</plugin>
+</plugins>
+</build>
+</project>

@@ -1,0 +1,13 @@
+com/juego/patrones/strategy/AtaqueFuerte.class
+com/juego/patrones/decorator/PersonajeDecorator.class
+com/juego/patrones/factory/PersonajeFactory.class
+com/juego/model/Personaje.class
+com/juego/patrones/strategy/EstrategiaAtaque.class
+com/juego/juego/JuegoLucha.class
+com/juego/patrones/decorator/ArmaduraDecorator.class
+com/juego/model/Guerrero.class
+com/juego/patrones/strategy/AtaqueRapido.class
+com/juego/model/Arquero.class
+com/juego/patrones/strategy/AtaqueMagico.class
+com/juego/patrones/decorator/EspadaDecorator.class
+com/juego/model/Mago.class
