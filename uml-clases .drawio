@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="Weifm0q7EM4xRMnb34xQ" name="Página-1">
+    <mxGraphModel dx="3674" dy="1001" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EA" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;&amp;laquo;interface&amp;raquo;&lt;/b&gt;&lt;br/&gt;&lt;b&gt;EstrategiaAtaque&lt;/b&gt;&lt;hr/&gt;+ calcularDano(atacante): int&lt;br/&gt;+ getNombre(): String" vertex="1">
+          <mxGeometry height="80" width="220" x="-895" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AF" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;AtaqueFuerte&lt;/b&gt;&lt;hr/&gt;- DANO_MIN: 25&lt;br/&gt;- DANO_MAX: 40&lt;br/&gt;- random: Random&lt;hr/&gt;+ calcularDano(): int&lt;br/&gt;+ getNombre(): String" vertex="1">
+          <mxGeometry height="110" width="170" x="-1080" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="AR" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;AtaqueRapido&lt;/b&gt;&lt;hr/&gt;- DANO_MIN: 10&lt;br/&gt;- DANO_MAX: 20&lt;br/&gt;- random: Random&lt;hr/&gt;+ calcularDano(): int&lt;br/&gt;+ getNombre(): String" vertex="1">
+          <mxGeometry height="110" width="170" x="-811" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="AM" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;AtaqueMagico&lt;/b&gt;&lt;hr/&gt;- DANO_MIN: 15&lt;br/&gt;- DANO_MAX: 50&lt;br/&gt;- random: Random&lt;hr/&gt;+ calcularDano(): int&lt;br/&gt;+ getNombre(): String" vertex="1">
+          <mxGeometry height="110" width="170" x="-580" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="AF_EA" edge="1" parent="1" source="AF" style="endArrow=open;endFill=0;startArrow=none;dashed=1;endSize=8;exitX=0.5;exitY=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f5f5f5;strokeColor=#666666;" target="EA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AR_EA" edge="1" parent="1" source="AR" style="endArrow=open;endFill=0;startArrow=none;dashed=1;endSize=8;exitX=0.5;exitY=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fillColor=#f5f5f5;strokeColor=#666666;" target="EA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AM_EA" edge="1" parent="1" source="AM" style="endArrow=open;endFill=0;startArrow=none;dashed=1;endSize=8;exitX=0.5;exitY=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f5f5f5;strokeColor=#666666;" target="EA">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-734" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;&amp;laquo;abstract&amp;raquo;&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Personaje&lt;/b&gt;&lt;hr/&gt;# nombre: String&lt;br/&gt;# puntosDeVida: int&lt;br/&gt;# vidaMaxima: int&lt;br/&gt;# estrategiaAtaque: EstrategiaAtaque&lt;hr/&gt;+ atacar(oponente: Personaje): void&lt;br/&gt;+ recibirDano(dano: int): void&lt;br/&gt;+ restaurarVida(): void&lt;br/&gt;+ estaVivo(): boolean&lt;br/&gt;+ setEstrategiaAtaque(e): void&lt;br/&gt;+ {abstract} getTipo(): String" vertex="1">
+          <mxGeometry height="200" width="300" x="-990" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="P_EA" edge="1" parent="1" source="P" style="endArrow=open;endFill=0;dashed=0;startArrow=none;endSize=8;exitX=0.5;exitY=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fillColor=#f5f5f5;strokeColor=#666666;" target="EA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GU" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;Guerrero&lt;/b&gt;&lt;hr/&gt;VIDA_MAX = 120&lt;hr/&gt;+ getTipo(): String&lt;br/&gt;  → &quot;Guerrero&quot;" vertex="1">
+          <mxGeometry height="90" width="170" x="-1040" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="GU_P" edge="1" parent="1" source="GU" style="endArrow=block;endFill=0;endSize=12;exitX=0.5;exitY=0;entryX=0.2;entryY=1;edgeStyle=orthogonalEdgeStyle;curved=1;fillColor=#f5f5f5;strokeColor=#666666;" target="P">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MA" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;Mago&lt;/b&gt;&lt;hr/&gt;VIDA_MAX = 80&lt;hr/&gt;+ getTipo(): String&lt;br/&gt;  → &quot;Mago&quot;" vertex="1">
+          <mxGeometry height="90" width="170" x="-925" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="MA_P" edge="1" parent="1" source="MA" style="endArrow=block;endFill=0;endSize=12;exitX=0.5;exitY=0;entryX=0.5;entryY=1;fillColor=#f5f5f5;strokeColor=#666666;" target="P">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AQ" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;Arquero&lt;/b&gt;&lt;hr/&gt;VIDA_MAX = 100&lt;hr/&gt;+ getTipo(): String&lt;br/&gt;  → &quot;Arquero&quot;" vertex="1">
+          <mxGeometry height="90" width="170" x="-760" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="AQ_P" edge="1" parent="1" source="AQ" style="endArrow=block;endFill=0;endSize=12;exitX=0.5;exitY=0;entryX=0.8;entryY=1;edgeStyle=orthogonalEdgeStyle;curved=1;fillColor=#f5f5f5;strokeColor=#666666;" target="P">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PD" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;&amp;laquo;abstract&amp;raquo;&lt;/b&gt;&lt;br/&gt;&lt;b&gt;PersonajeDecorator&lt;/b&gt;&lt;hr/&gt;# personajeDecorado: Personaje&lt;hr/&gt;+ atacar(op): void&lt;br/&gt;+ recibirDano(d): void&lt;br/&gt;+ estaVivo(): boolean&lt;br/&gt;+ getTipo(): String&lt;br/&gt;+ {abstract} getDescripcion(): String" vertex="1">
+          <mxGeometry height="140" width="220" x="-1280" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="PD_P" edge="1" parent="1" source="PD" style="endArrow=block;endFill=0;endSize=12;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fillColor=#f5f5f5;strokeColor=#666666;" target="P">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PD_AGG" edge="1" parent="1" source="PD" style="endArrow=ERmandOne;startArrow=ERmanyToOne;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=0;edgeStyle=orthogonalEdgeStyle;fillColor=#f5f5f5;strokeColor=#666666;" target="P" value="decora">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ED" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;EspadaDecorator&lt;/b&gt;&lt;hr/&gt;BONUS_DANO = 15&lt;hr/&gt;+ atacar(op): void&lt;br/&gt;+ getBonusDano(): int&lt;br/&gt;+ estaVivo(): boolean&lt;br/&gt;+ getDescripcion(): String" vertex="1">
+          <mxGeometry height="110" width="185" x="-1410" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="ED_PD" edge="1" parent="1" source="ED" style="endArrow=block;endFill=0;endSize=12;exitX=0.5;exitY=0;entryX=0.2;entryY=1;fillColor=#f5f5f5;strokeColor=#666666;" target="PD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AD" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;ArmaduraDecorator&lt;/b&gt;&lt;hr/&gt;REDUCCION_DANO = 10&lt;br/&gt;DANO_MINIMO = 1&lt;hr/&gt;+ recibirDano(d): void&lt;br/&gt;+ getReduccionDano(): int&lt;br/&gt;+ getDescripcion(): String" vertex="1">
+          <mxGeometry height="110" width="185" x="-1200" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="AD_PD" edge="1" parent="1" source="AD" style="endArrow=block;endFill=0;endSize=12;exitX=0.5;exitY=0;entryX=0.8;entryY=1;fillColor=#f5f5f5;strokeColor=#666666;" target="PD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PF" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;&amp;laquo;Factory Method&amp;raquo;&lt;/b&gt;&lt;br/&gt;&lt;b&gt;PersonajeFactory&lt;/b&gt;&lt;hr/&gt;TIPO_GUERRERO = &quot;guerrero&quot;&lt;br/&gt;TIPO_MAGO = &quot;mago&quot;&lt;br/&gt;TIPO_ARQUERO = &quot;arquero&quot;&lt;hr/&gt;+ {static} crearPersonaje(tipo, nombre): Personaje&lt;br/&gt;+ {static} getTiposDisponibles(): String[]" vertex="1">
+          <mxGeometry height="130" width="280" x="-580" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="PF_P" edge="1" parent="1" source="PF" style="endArrow=open;endFill=0;dashed=1;endSize=8;exitX=0;exitY=0.5;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fillColor=#f5f5f5;strokeColor=#666666;" target="P" value="«creates»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JL" parent="1" style="text;html=1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;rounded=1;arcSize=4;fontSize=11;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;&amp;laquo;main&amp;raquo;&lt;/b&gt;&lt;br/&gt;&lt;b&gt;JuegoLucha&lt;/b&gt;&lt;hr/&gt;MAX_TURNOS = 50&lt;hr/&gt;+ ejecutarCombate(p1, p2): Personaje&lt;br/&gt;- determinarGanador(…): Personaje&lt;br/&gt;- imprimirEstado(…): void&lt;br/&gt;+ {static} main(args): void" vertex="1">
+          <mxGeometry height="130" width="270" x="-575" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="JL_P" edge="1" parent="1" source="JL" style="endArrow=open;endFill=0;dashed=1;endSize=8;fillColor=#f5f5f5;strokeColor=#666666;" target="P" value="«uses»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JL_PF" edge="1" parent="1" source="JL" style="endArrow=open;endFill=0;dashed=1;endSize=8;exitX=0.5;exitY=0;entryX=0.5;entryY=1;fillColor=#f5f5f5;strokeColor=#666666;" target="PF">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
